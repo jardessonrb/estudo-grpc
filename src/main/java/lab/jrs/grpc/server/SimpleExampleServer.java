@@ -3,14 +3,14 @@ package lab.jrs.grpc.server;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
-public class SimpleExempleServer {
+public class SimpleExampleServer {
     private int port;
     private Server server;
-    public SimpleExempleServer(int port){
+    public SimpleExampleServer(int port){
         this.port = port;
         this.server = ServerBuilder
                 .forPort(this.port)
-                .addService(new SimpleExempleGrpcImpl())
+                .addService(new SimpleExampleServiceGrpcImpl())
                 .build();
     }
 
@@ -35,7 +35,7 @@ public class SimpleExempleServer {
     }
 
     public static void main(String[] args) {
-        SimpleExempleServer simpleExempleServer = new SimpleExempleServer(8080);
+        SimpleExampleServer simpleExempleServer = new SimpleExampleServer(8080);
         simpleExempleServer.createServer();
     }
 }

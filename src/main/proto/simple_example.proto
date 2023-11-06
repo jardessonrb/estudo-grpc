@@ -2,11 +2,11 @@ syntax = "proto3";
 
 option java_package = "lab.jrs.grpc.simpleexample";
 option java_multiple_files = true;
-option java_outer_classname = "SimpleExempleProto";
+option java_outer_classname = "SimpleExampleProto";
 
 package simpleexample;
 
-service SimpleExemple {
+service SimpleExample {
   rpc sum(Request) returns (Response) {}
 }
 

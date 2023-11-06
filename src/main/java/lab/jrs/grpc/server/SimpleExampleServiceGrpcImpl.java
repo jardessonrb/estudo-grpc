@@ -3,7 +3,7 @@ package lab.jrs.grpc.server;
 import lab.jrs.grpc.simpleexample.Request;
 import lab.jrs.grpc.simpleexample.Response;
 import lab.jrs.grpc.simpleexample.SimpleExempleGrpc;
-public class SimpleExempleGrpcImpl extends SimpleExempleGrpc.SimpleExempleImplBase {
+public class SimpleExampleServiceGrpcImpl extends SimpleExempleGrpc.SimpleExempleImplBase {
 
     @Override
     public void sum(Request request, io.grpc.stub.StreamObserver<Response> responseObserver) {

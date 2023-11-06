@@ -8,11 +8,11 @@ import lab.jrs.grpc.simpleexample.SimpleExempleGrpc;
 
 import java.util.Scanner;
 
-public class SimpleExempleClient {
+public class SimpleExampleClient {
 
     private int port;
 
-    public SimpleExempleClient(int port){
+    public SimpleExampleClient(int port){
         this.port = port;
     }
 
@@ -34,7 +34,7 @@ public class SimpleExempleClient {
     }
 
     public static void main(String[] args) {
-        SimpleExempleClient simpleExempleClient = new SimpleExempleClient(8080);
+        SimpleExampleClient simpleExempleClient = new SimpleExampleClient(8080);
 
         Scanner input = new Scanner(System.in);
 

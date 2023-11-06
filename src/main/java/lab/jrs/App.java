@@ -1,17 +1,17 @@
 package lab.jrs;
 
-import lab.jrs.grpc.server.SimpleExempleClient;
-import lab.jrs.grpc.server.SimpleExempleServer;
+import lab.jrs.grpc.server.SimpleExampleClient;
+import lab.jrs.grpc.server.SimpleExampleServer;
 
 import java.util.Scanner;
 
 class RunServerThread extends Thread {
     private final int port;
-    private SimpleExempleServer server;
+    private SimpleExampleServer server;
 
     public RunServerThread(int port){
         this.port = port;
-        this.server = new SimpleExempleServer(this.port);
+        this.server = new SimpleExampleServer(this.port);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class App
     public static void main( String[] args )
     {
         int port = 8080;
-        SimpleExempleClient client = new SimpleExempleClient(port);
+        SimpleExampleClient client = new SimpleExampleClient(port);
         RunServerThread runServerThread = new RunServerThread(port);
 
         runServerThread.start();
